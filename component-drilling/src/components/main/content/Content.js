@@ -5,7 +5,7 @@ export default class Content extends Component {
     render() {
         return (
             <div>
-                <h3>{this.props.currentCategory}</h3>
+                <h3>Category{this.props.currentCategory === "" ? "" : " / "+this.props.currentCategory}</h3>
                 <Table>
                     <thead>
                         <tr>
