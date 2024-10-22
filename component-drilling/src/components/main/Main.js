@@ -15,7 +15,7 @@ export default class Main extends Component {
             <Content addToCart={this.props.addToCart} products = {this.props.products} currentCategory={this.props.currentCategory} />
         </Col>
         <Col xs="3">
-            <RightsideBar cart = {this.props.cart} />
+            <RightsideBar removeFromCart={this.props.removeFromCart} cart = {this.props.cart} />
         </Col>
       </Row>
     )

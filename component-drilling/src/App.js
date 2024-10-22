@@ -31,6 +31,10 @@ addToCart = (product) => {
   }
   this.setState({cart : newCart});
 }
+removeFromCart = (product) => {
+  let newCart = this.state.cart.filter(c => c.product.id !== product.id);
+  this.setState({cart : newCart});
+}
   render() {
     return (
       <div>
@@ -39,7 +43,7 @@ addToCart = (product) => {
             <Navi />
           </Row>
           <Row>
-            <Main addToCart = {this.addToCart} cart={this.state.cart} changeCategory = {this.changeCategory} products = {this.state.products} currentCategory= {this.state.currentCategory} />
+            <Main removeFromCart={this.removeFromCart} addToCart = {this.addToCart} cart={this.state.cart} changeCategory = {this.changeCategory} products = {this.state.products} currentCategory= {this.state.currentCategory} />
           </Row>
         </Container>
       </div>

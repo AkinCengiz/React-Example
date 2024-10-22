@@ -14,7 +14,8 @@ export default class RightsideBar extends Component {
                             {
                                 this.props.cart.map(cartItem => (
                                     <ListGroupItem key={cartItem.product.id} style={{marginBottom : "2px"}}>
-                                        {cartItem.product.productName} <Badge color="primary">{cartItem.quantity}</Badge>
+                                        {cartItem.product.productName}  
+                                        <Badge style={{margin:"2px", cursor:"pointer"}} color="primary">{cartItem.quantity}</Badge> <Badge color="danger" onClick={() => this.props.removeFromCart(cartItem.product)}  style={{margin:"2px", cursor:"pointer"}}>X</Badge>
                                     </ListGroupItem>
                                 ))
                             }                    
