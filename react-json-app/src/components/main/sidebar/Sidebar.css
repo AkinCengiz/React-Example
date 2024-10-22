@@ -1,0 +1,15 @@
+.Sidebar{
+    width: 100%;
+}
+.Category-List{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.Category-List-Item{
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+}
